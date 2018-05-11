@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.rodolfo.view.TelaPrincipal">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="Abrir" />
+                        <MenuItem mnemonicParsing="false" onAction="#save" text="Salvar" />
+                    <MenuItem mnemonicParsing="false" text="Sair" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Compilar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#compile" text="Salvar e Compilar" />
+                     </items></Menu>
+                <Menu mnemonicParsing="false" text="Sobre" />
+              </menus>
+            </MenuBar>
+            <TabPane prefHeight="200.0" fx:id="tabPane" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Input">
+                     <content>
+                        <TextArea fx:id="editor" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                <Tab text="Output">
+                     <content>
+                        <TextArea fx:id="saida" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
